@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="NL CentralPoint"  parallel="tests" thread-count="3" verbose="2" >
+
+    <test name="CentralPoint Test [Chrome]" >
+        <parameter name="selenium.browser" value="chrome" />
+        <packages>
+            <package name="nl.centralpoint.task.tests.*"/>
+        </packages>
+    </test>
+
+    <test name="CentralPoint Test [Headless Chrome]" >
+        <parameter name="selenium.browser" value="headless-chrome" />
+        <packages>
+            <package name="nl.centralpoint.task.tests.*"/>
+        </packages>
+    </test>
+
+    </suite>
